@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="../css/carrito.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="../assets/img/carla grama nuevo.png" alt="logo" class="logo">
+        </div>
+        <h1>Carrito de Compras</h1>
+        <nav>
+            <ul class="nav">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../page/sobreNosotros.html">Sobre nosotros</a></li>
+                <li><a href="../page/servicios.html">Servicios</a></li>
+                <li><a href="../page/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Servicios en tu carrito</h2>
+        <div id="cart-items"></div> <!-- Aquí se mostrarán los servicios del carrito -->
+        <p>Total de items: <span id="cart-count">0</span></p>
+        <p><strong>Detalle de costo:</strong></p>
+        <div id="cost-details"></div> <!-- Detalles del costo, precio y IVA -->
+        <p>Total a pagar: $<span id="cart-total">0</span></p> <!-- Total con IVA -->
+        <div>
+            <button onclick="clearCart()">Vaciar carrito</button> <!-- Botón Vaciar carrito -->
+        </div>
+        <div>
+            <button id="pay-button" onclick="goToPayment()">Pagar</button> <!-- Botón Pagar -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Todos los derechos reservados &copy; 2024</p>
+    </footer>
+
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

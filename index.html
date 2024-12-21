@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Sixtyfour+Convergence&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="assets/img/carla grama nuevo.png" alt="logo" class="logo">
+        </div>
+        <h1>DISEÑO WEB</h1>
+        <h2>Páginas web a tu medida</h2>
+        
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav" id="nav">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./page/sobreNosotros.html">Sobre nosotros</a></li>
+                <li><a href="./page/servicios.html">Servicios</a></li>
+                <li><a href="./page/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="buttons-container">
+            <button class="login-btn">Iniciar Sesión</button>
+            <button class="cart-btn" onclick="window.location.href='./page/carrito.html'">
+                <img src="assets/img/carrito-icono.png" alt="Carrito" class="cart-icon">
+                <span id="cart-count">0</span> <!-- Contador de elementos en el carrito -->
+            </button>
+        </div>
+    </header>
+
+    <main class="grid-container">
+        <section class="intro">
+            <h3>Nuestros Servicios</h3>
+            <p>Ofrecemos soluciones de diseño web como landing pages, e-commerce, páginas institucionales y blogs.</p>
+            <img src="assets/img/personalEmpresa.jpg" alt="Nuestros servicios" class="servicios-img">
+        </section>
+
+        <section class="video-representativo">
+            <h3>Descubre lo que hacemos</h3>
+            <iframe src="./assets/video/videoTrabajando.mp4" 
+                    title="Video Representativo" 
+                    width="560" 
+                    height="315" 
+                    frameborder="0" 
+                    allowfullscreen>
+            </iframe>
+        </section>
+
+        <section class="reseñas">
+            <h3>Lo que dicen nuestros clientes</h3>
+            <div class="reseñas-container">
+                <div class="reseña">
+                    <p>"Excelente servicio, muy profesional y siempre atentos a nuestras necesidades."</p>
+                    <h4>- Martín Antón</h4>
+                </div>
+                <div class="reseña">
+                    <p>"El equipo de diseño hizo un trabajo increíble. Mi página web se ve fantástica."</p>
+                    <h4>- Rigel Arión</h4>
+                </div>
+                <div class="reseña">
+                    <p>"El proyecto fue entregado a tiempo y con un diseño que superó nuestras expectativas."</p>
+                    <h4>- Graciela Primc</h4>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Todos los derechos reservados &copy; 2024</p>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const nav = document.getElementById('nav');
+            
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+            
+            // Actualizamos el carrito al cargar la página
+            actualizarCarrito();
+        });
+    </script>
+</body>
+</html>
+
